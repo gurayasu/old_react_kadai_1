@@ -21,7 +21,7 @@ app.use(cors());
 const getDataFromApi = async (keyword) => {
   // cloud functionsから実行する場合には地域の設定が必要になるため，`country=JP`を追加している
   const requestUrl =
-    "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=9f5da8804ddb8e0f&keyword=";
+    "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=&keyword=";
   const result = await requestPromise(`${requestUrl}${keyword}`);
   return result;
 };
